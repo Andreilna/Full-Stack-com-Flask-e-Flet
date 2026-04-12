@@ -1,161 +1,82 @@
-# 🎬 Streaming API - Catálogo de Entretenimento
+# 🚀 API Flask com Flasgger
 
-API REST desenvolvida com Flask para gerenciamento de um catálogo de filmes, séries, atores e gêneros.  
-A aplicação utiliza PostgreSQL com Docker e possui documentação interativa via Swagger (Flasgger).
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-- Python 3.14+
-- Flask
-- Flasgger (Swagger UI)
-- Flask-SQLAlchemy
-- Flask-Migrate
-- Pydantic v2
-- PostgreSQL
-- Docker & Docker Compose
-- uv (gerenciador de pacotes moderno)
+Este projeto é uma API REST desenvolvida com **Flask**, utilizando **Flasgger** para documentação interativa (Swagger) e **PostgreSQL** com Docker.
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📦 Como rodar o projeto
 
-src/
- ├── routes/
- │    ├── movies.py
- │    ├── series.py
- │    ├── actors.py
- │    └── genres.py
- │
- ├── schemas/
- │    ├── movie_schema.py
- │    ├── series_schema.py
- │    ├── actor_schema.py
- │    └── genre_schema.py
- │
- ├── database/
- │    ├── database.py
- │    └── seed.sql
- │
- ├── models.py
- └── app.py
+Siga os passos abaixo para executar a aplicação localmente:
 
----
+### 1️⃣ Clonar o repositório
 
-## ⚙️ Pré-requisitos
+```bash
+git clone https://github.com/Andreilna/AT1-Api-em-flask-com-flasgger.git
+```
 
-- Python 3.14+
-- Docker + Docker Compose
-- uv instalado
+### 2️⃣ Acessar a pasta do backend
 
-Instalar o uv (caso não tenha):
-
-pip install uv
-
----
-
-## 🛠️ Como Rodar o Projeto
-
-### 1. Clone o repositório
-
-git clone <LINK_DO_SEU_REPO>  
+```bash
 cd AT1-Api-em-flask-com-flasgger/apps/backend
+```
+
+### 3️⃣ Configurar o arquivo `.env`
+
+Crie um arquivo `.env` com base no `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Depois, edite o `.env` conforme necessário.
 
 ---
 
-### 2. Criar ambiente virtual
+### 4️⃣ Subir o banco de dados com Docker
 
-uv venv
-
-Ativar:
-
-Windows  
-.venv\Scripts\activate  
-
-Linux/Mac  
-source .venv/bin/activate
+```bash
+docker compose up -d
+```
 
 ---
 
-### 3. Instalar dependências
+### 5️⃣ Rodar a aplicação Flask
 
-uv pip install -r requirements.txt  
-
-ou  
-
-uv sync
-
----
-
-### 4. Configurar variáveis de ambiente
-
-Crie um arquivo .env na raiz:
-
-DATABASE_URL=postgresql://devuser:devpassword@localhost:5432/AT1-Api-em-flask-com-flasgger
-
----
-
-### 5. Subir o banco de dados (PostgreSQL)
-
-docker-compose up -d
-
-Isso irá:
-- Criar o banco automaticamente
-- Rodar o seed.sql
-- Expor na porta 5432
-
----
-
-### 6. Rodar a aplicação
-
+```bash
 uv run flask --app src/app run
+```
 
 ---
 
-## 📖 Documentação Swagger
+## 📚 Acessar a documentação da API
 
-Acesse no navegador:
+Após iniciar o servidor, acesse:
 
-http://localhost:5000/apidocs
+👉 http://127.0.0.1:5000/apidocs/
 
----
-
-## 🔥 Endpoints da API
-
-### 🎥 Movies
-GET    /movies  
-POST   /movies  
-PUT    /movies/{id}  
-DELETE /movies/{id}  
-
-### 📺 Series
-GET    /series  
-POST   /series  
-PUT    /series/{id}  
-DELETE /series/{id}  
-
-### 🎭 Actors
-GET    /actors  
-POST   /actors  
-PUT    /actors/{id}  
-DELETE /actors/{id}  
-
-### 🎬 Genres
-GET    /genres  
-POST   /genres  
-PUT    /genres/{id}  
-DELETE /genres/{id}  
+Você verá a documentação interativa da API (Swagger), onde é possível testar todas as rotas.
 
 ---
 
-## 🐳 Docker
+## 🛠 Tecnologias utilizadas
 
-Subir container  
-docker-compose up -d  
+* Python
+* Flask
+* Flasgger (Swagger)
+* PostgreSQL
+* Docker
+* Docker Compose
 
-Parar container  
-docker-compose down  
+---
 
-Rebuild  
-docker-compose up --build  
+## ✅ Observações
+
+* Certifique-se de que o Docker está rodando antes de executar o `docker compose`.
+* O comando `uv run` requer o `uv` instalado no ambiente.
+* Todas as rotas da API podem ser testadas diretamente pela interface Swagger.
+
+---
+
+## 👨‍💻 Autor
+
+Projeto desenvolvido para fins acadêmicos.
