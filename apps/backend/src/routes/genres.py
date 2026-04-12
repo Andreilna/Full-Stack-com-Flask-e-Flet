@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
-from src.schemas.genre_schema import GenreSchema
-from src.models import Genre, db
+from schemas.genre_schema import GenreSchema
+from models import Genre, db
 
 genres_bp = Blueprint('genres', __name__)
 

@@ -2,13 +2,13 @@ import os
 from flask import Flask
 from flasgger import Swagger
 from dotenv import load_dotenv
-from .database import db, migrate
+from database import db, migrate
 
 # Importar as rotas (Blueprints)
-from .routes.movies import movies_bp
-from .routes.series import series_bp
-from .routes.actors import actors_bp
-from .routes.genres import genres_bp
+from routes.movies import movies_bp
+from routes.series import series_bp
+from routes.actors import actors_bp
+from routes.genres import genres_bp
 
 load_dotenv()
 

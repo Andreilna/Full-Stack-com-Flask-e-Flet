@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
-from src.schemas.movie_schema import MovieSchema
-from src.models import Movie, db
+from schemas.movie_schema import MovieSchema
+from models import Movie, db
 
 movies_bp = Blueprint('movies', __name__)
 

@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
-from src.schemas.series_schema import SeriesSchema
-from src.models import Series, db
+from schemas.series_schema import SeriesSchema
+from models import Series, db
 
 series_bp = Blueprint('series', __name__)
 

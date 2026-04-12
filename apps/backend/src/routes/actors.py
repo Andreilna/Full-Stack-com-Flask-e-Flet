@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
-from src.schemas.actor_schema import ActorSchema
-from src.models import Actor, db
+from schemas.actor_schema import ActorSchema
+from models import Actor, db
 
 actors_bp = Blueprint('actors', __name__)
 
