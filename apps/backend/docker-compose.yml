@@ -13,7 +13,6 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      # Isso vai carregar o seu seed.sql automaticamente
       - ./src/database/seed.sql:/docker-entrypoint-initdb.d/seed.sql
 
 volumes:
