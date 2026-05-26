@@ -22,8 +22,6 @@ from src.views.actors import build_actors_view
 from src.views.genres import build_genres_view
 from src.views.movies import build_movies_view
 from src.views.series import build_series_view
-from src.views.add_movie import build_add_movie_view
-
 
 def main(page: ft.Page):
     page.title = "Catálogo de Filmes"
