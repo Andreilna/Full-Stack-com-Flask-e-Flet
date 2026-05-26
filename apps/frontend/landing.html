@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,14 +8,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="landing.css" />
 </head>
+
 <body class="bg-slate-950 text-slate-100">
   <div class="min-h-screen px-6 py-12 lg:px-24">
-    <div class="mx-auto max-w-5xl rounded-3xl border border-slate-800 bg-slate-900/90 p-10 shadow-2xl shadow-slate-950/40">
+    <div
+      class="mx-auto max-w-5xl rounded-3xl border border-slate-800 bg-slate-900/90 p-10 shadow-2xl shadow-slate-950/40">
       <header class="mb-10 text-center">
         <p class="text-sm uppercase tracking-[0.4em] text-cyan-400">Projeto Full Stack</p>
         <h1 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Full Stack com Flask e Flet</h1>
         <p class="mx-auto mt-6 max-w-2xl text-slate-300 sm:text-lg">
-          Aplicação de backend em Flask para gerenciar filmes e frontend em Flet para listar registros e cadastrar novos dados via API.
+          Aplicação de backend em Flask para gerenciar filmes e frontend em Flet para listar registros e cadastrar novos
+          dados via API.
         </p>
       </header>
 
@@ -22,10 +26,14 @@
         <article class="rounded-3xl bg-slate-950/80 p-8 shadow-xl shadow-slate-950/20">
           <h2 class="mb-4 text-2xl font-semibold text-white">O que está incluso</h2>
           <ul class="space-y-3 text-slate-300">
-            <li class="flex gap-3"><span class="text-cyan-400">•</span> Backend em Flask com endpoints REST para filmes, séries, atores e gêneros.</li>
-            <li class="flex gap-3"><span class="text-cyan-400">•</span> Frontend desktop em Flet consumindo o endpoint `GET /movies`.</li>
-            <li class="flex gap-3"><span class="text-cyan-400">•</span> Formulário que envia `POST /movies` e mostra feedback ao usuário.</li>
-            <li class="flex gap-3"><span class="text-cyan-400">•</span> Página estática com instruções de execução usando Tailwind CSS.</li>
+            <li class="flex gap-3"><span class="text-cyan-400">•</span> Backend em Flask com endpoints REST para filmes,
+              séries, atores e gêneros.</li>
+            <li class="flex gap-3"><span class="text-cyan-400">•</span> Frontend desktop em Flet consumindo o endpoint
+              `GET /movies`.</li>
+            <li class="flex gap-3"><span class="text-cyan-400">•</span> Formulário que envia `POST /movies` e mostra
+              feedback ao usuário.</li>
+            <li class="flex gap-3"><span class="text-cyan-400">•</span> Página estática com instruções de execução
+              usando Tailwind CSS.</li>
           </ul>
         </article>
 
@@ -34,18 +42,19 @@
           <div class="space-y-4 text-slate-200">
             <div>
               <p class="font-medium text-slate-100">1. Iniciar o backend</p>
-              <pre class="rounded-2xl bg-slate-900 p-4 text-sm text-emerald-300">cd apps/backend
-python main.py</pre>
+              <section class="rounded-2xl bg-slate-900 p-4 text-sm text-emerald-300"><h2>cd apps/backend</h2>
+uv run flask --app src/app run --debug</section>
             </div>
             <div>
               <p class="font-medium text-slate-100">2. Iniciar o frontend</p>
-              <pre class="rounded-2xl bg-slate-900 p-4 text-sm text-emerald-300">cd apps/frontend
-.\.venv\Scripts\Activate.ps1
-python main.py</pre>
+              <section class="rounded-2xl bg-slate-900 p-4 text-sm text-emerald-300"><h2>cd apps/frontend</h2>
+uv run flet run main.py</section>
             </div>
             <div>
               <p class="font-medium text-slate-100">3. Abrir a landing page</p>
-              <p class="text-slate-300">Abra o arquivo <code class="rounded bg-slate-800 px-1 py-0.5">landing.html</code> no navegador para ver a apresentação do projeto.</p>
+              <p class="text-slate-300">Abra o arquivo <code
+                  class="rounded bg-slate-800 px-1 py-0.5">landing.html</code> no navegador para ver a apresentação do
+                projeto.</p>
             </div>
           </div>
         </article>
@@ -57,4 +66,5 @@ python main.py</pre>
     </div>
   </div>
 </body>
+
 </html>
