@@ -143,18 +143,3 @@ def delete_series(series_id: int) -> dict:
         "DELETE",
         f"/series/{series_id}"
     )
-
-
-def get_actors() -> list[dict]:
-    """Busca a lista de atores do backend."""
-    return _request_json("GET", "/actors/")
-
-
-def get_genres() -> list[dict]:
-    """Busca a lista de gêneros do backend."""
-    return _request_json("GET", "/genres/")
-
-
-def get_series() -> list[dict]:
-    """Busca a lista de séries do backend."""
-    return _request_json("GET", "/series/")

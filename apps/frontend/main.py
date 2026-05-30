@@ -20,15 +20,22 @@ from src.api import (
 )
 from src.views.actors import build_actors_view
 from src.views.genres import build_genres_view
-from src.views.movies import build_movies_view
 from src.views.series import build_series_view
+from src.views.movies import (
+    build_movies_view,
+    build_add_movie_view
+)
 
 def main(page: ft.Page):
     page.title = "Catálogo de Filmes"
-    page.theme_mode = ft.ThemeMode.LIGHT
+
+    page.theme_mode = ft.ThemeMode.DARK
+    page.bgcolor = ft.Colors.BLACK
+
     page.window_width = 600
     page.window_height = 800
-
+    page.window.full_screen = True
+    
     def render(view_content: ft.Control):
         """Limpa a tela e renderiza novo conteúdo."""
         page.clean()
@@ -539,4 +546,4 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main)
+    ft.run(main)
